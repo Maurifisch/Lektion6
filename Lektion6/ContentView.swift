@@ -13,17 +13,22 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
+            Spacer()
+            
+            
             Text(messageString)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
-                .minimumScaleFactor(0.5)
-                .multilineTextAlignment(.center)
+               .minimumScaleFactor(0.5)
+               .multilineTextAlignment(.center)
                 .foregroundColor(.red)
                 .frame(height: 150)
                 .frame(maxWidth: .infinity)
                 .border(.orange, width: 1)
                 .padding()
-
+            
+            Spacer()
+            
            
           
                
@@ -33,6 +38,7 @@ struct ContentView: View {
                    }
                    
                .buttonStyle(.borderedProminent)
+               Spacer()
                
                Button("Great"){
                    messageString = " You Are Great"
@@ -41,6 +47,8 @@ struct ContentView: View {
                
                }
                .buttonStyle(.borderedProminent)
+            
+            
                
            
            // Image(systemName: "swift")
@@ -49,6 +57,7 @@ struct ContentView: View {
               //  .foregroundColor(.orange)
               //  .padding()
                .border(.purple, width: 5)
+               .padding()
         }
        
     }
