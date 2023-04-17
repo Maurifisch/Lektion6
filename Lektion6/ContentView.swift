@@ -12,52 +12,66 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
-            Spacer()
+        ZStack {
+            Rectangle()
+                .fill(.black.gradient)
             
+            //Color.yellow.opacity(0.5)
+                .ignoresSafeArea()
             
-            Text(messageString)
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-               .minimumScaleFactor(0.5)
-               .multilineTextAlignment(.center)
-                .foregroundColor(.red)
-                .frame(height: 150)
-                .frame(maxWidth: .infinity)
-                .border(.orange, width: 1)
-                .padding()
-            
-            Spacer()
-            
-           
-          
+            VStack {
+                Text("You Have Skills")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    .foregroundColor(Color("Gold-BC"))
+                    .padding()
+                    .background(Color("Maroon-BC"))
+                    .cornerRadius(15)
+                
+                Spacer()
+                
+                
+                Text(messageString)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                   .minimumScaleFactor(0.5)
+                   .multilineTextAlignment(.center)
+                    .foregroundColor(.red)
+                    .frame(height: 150)
+                    .frame(maxWidth: .infinity)
+                    .border(.orange, width: 1)
+                    .padding()
+                
+                Spacer()
+                
                
-           HStack {
-               Button("Awesome") {
-                       messageString = "You Are Awesome!"
-                   }
+              
                    
-               .buttonStyle(.borderedProminent)
-               Spacer()
-               
-               Button("Great"){
-                   messageString = " You Are Great"
-           }
-               
-               
+               HStack {
+                   Button("Awesome") {
+                           messageString = "You Are Awesome!"
+                       }
+                       
+                  // .buttonStyle(.borderedProminent)
+                   Spacer()
+                   
+                   Button("Great"){
+                       messageString = " You Are Great"
                }
-               .buttonStyle(.borderedProminent)
-            
-            
+                   
+                   
+                   }
+                   .buttonStyle(.borderedProminent)
+                
+                
+                   
                
-           
-           // Image(systemName: "swift")
-              //  .resizable()
-                //.scaledToFit()
-              //  .foregroundColor(.orange)
-              //  .padding()
-               .border(.purple, width: 5)
-               .padding()
+               
+                   //.border(.purple, width: 5)
+               // zeichnet lila Rahmen um awesome und great
+                   .padding()
+                   
+            }
         }
        
     }
